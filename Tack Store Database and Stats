@@ -1,0 +1,26 @@
+--Create a store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER,rating INTEGER);
+
+INSERT INTO store VALUES
+(1,"saddle",5,3000,2.5),
+(2,"bridle",12,150,4.3),
+(3,"bit",32,45,5.1),
+(4,"helmet",16,450,9.6),
+(5,"tall boots", 8,1000,7.2),
+(6,"martingale", 19,55, 3.6),
+(7,"crop", 22,30,10.0),
+(8,"breeches", 120, 195, 8.4),
+(9,"cookies",20,20,6.5),
+(10,"halter", 15,50,4.1),
+(11,"horse boots", 13, 195, 10),
+(12,"saddle pad", 57,65,9.9),
+(13,"sun shirt", 3,45,6.3),
+(14,"vest",7,750,10),
+(15,"coat",27,235,7.9);
+
+--Display the database ordered by price
+SELECT * FROM store ORDER BY price;
+
+--What is the total amount of store inventory?
+SELECT quantity, SUM (quantity)FROM store;
